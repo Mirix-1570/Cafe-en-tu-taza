@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'pfs_cafe_en_tu_taza',
-    'cafe_en_tu_taza_pfs',
     'rest_framework'
 ]
 
