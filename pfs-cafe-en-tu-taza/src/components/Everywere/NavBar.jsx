@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
 
 function NavBar() {
+  // Hook de estado de React para manejar la visibilidad del menú en dispositivos móviles.
+  // `isMenuOpen` es un booleano que indica si el menú está abierto o cerrado.
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // Función para cambiar el estado de `isMenuOpen`.
+  // Si está abierto, lo cierra, y viceversa.
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <header
-      className="relative w-full bg-[#221a11] dark"
-      style={{ fontFamily: '"Plus Jakarta Sans", "Noto Sans", sans-serif' }}
-    >
+    // Contenedor principal de la barra de navegación.
+    <header className="relative w-full bg-[#221a11] dark" style={{ fontFamily: '"Plus Jakarta Sans", "Noto Sans", sans-serif' }}>
       <div className="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#483623] px-4 sm:px-10 py-3">
         {/* Logo y Título */}
         <div className="flex items-center gap-4 text-white">
@@ -35,15 +37,15 @@ function NavBar() {
 
         {/* Navegación */}
         <div className="flex items-center gap-4">
-          {/* Enlaces para pantallas grandes */}
+          {/* Enlaces de navegación para pantallas grandes (escritorio). Se oculta en pantallas pequeñas (md:flex). */}
           <nav className="hidden md:flex items-center gap-9">
-            <a className="text-white text-sm font-medium leading-normal" href="#">Coffee</a>
-            <a className="text-white text-sm font-medium leading-normal" href="#">Community</a>
-            <a className="text-white text-sm font-medium leading-normal" href="#">Contact</a>
-            <a className="text-white text-sm font-medium leading-normal" href="#">Sign In</a>
+            <a className="text-white text-sm font-medium leading-normal" href="../../Coffee">Coffee</a>
+            <a className="text-white text-sm font-medium leading-normal" href="../../Community">Community</a>
+            <a className="text-white text-sm font-medium leading-normal" href="../../Contact">Contact</a>
+            <a className="text-white text-sm font-medium leading-normal" href="../../SignIn">Sign In</a>
           </nav>
 
-          {/* Botones de Carrito y Búsqueda */}
+          {/* Botones de acción: Carrito y Búsqueda. */}
           <div className="flex gap-2">
             <button
               className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#483623] text-white text-sm font-bold leading-normal tracking-[0.015em]"
@@ -63,9 +65,10 @@ function NavBar() {
             </button>
           </div>
 
-          {/* Botón de Menú Hamburguesa para pantallas pequeñas */}
+          {/* Botón de Menú Hamburguesa para pantallas pequeñas. Se muestra solo en pantallas pequeñas (md:hidden). */}
           <div className="md:hidden">
             <button
+              // Al hacer clic, se llama a la función `toggleMenu` para mostrar u ocultar el menú.
               onClick={toggleMenu}
               className="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-[#483623] text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5"
             >
@@ -77,7 +80,8 @@ function NavBar() {
         </div>
       </div>
 
-      {/* Menú desplegable para pantallas pequeñas */}
+      {/* Menú desplegable para pantallas pequeñas. */}
+      {/* Se renderiza condicionalmente solo si `isMenuOpen` es verdadero. */}
       {isMenuOpen && (
         <nav className="md:hidden bg-[#221a11] border-b border-solid border-b-[#483623]">
           <ul className="flex flex-col items-center gap-4 py-4">

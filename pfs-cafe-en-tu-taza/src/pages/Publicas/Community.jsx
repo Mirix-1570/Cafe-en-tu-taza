@@ -1,11 +1,13 @@
 import React from 'react'
 
-function Blog() {
+function Community() {
   return (
     <div>
+
+        
 
     </div>
   )
 }
 
-export default Blog
+export default Community

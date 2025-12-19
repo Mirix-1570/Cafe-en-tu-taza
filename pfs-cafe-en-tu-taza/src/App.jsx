@@ -1,14 +1,11 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-//import './App.css'//
-import Home from "./components/Home/Home";
+
+import Routing from "./routes/Routing";
 
 function App() {
   return (
     <>
-      <div className="layout-container flex h-full grow flex-col">
-      <Home />
+      <div>
+       <Routing />
       </div>
     </>
   );

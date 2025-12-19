@@ -1,11 +1,13 @@
 import React from 'react'
 
-function Properies() {
+function LogIn() {
   return (
     <div>
-        
+
+
+
     </div>
   )
 }
 
-export default Properies
+export default LogIn

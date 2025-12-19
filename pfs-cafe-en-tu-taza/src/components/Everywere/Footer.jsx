@@ -1,16 +1,14 @@
-import React from 'react';
 
 const footerLinks = [
-  { href: '#', text: 'About Us' },
-  { href: '#', text: 'Contact' },
-  { href: '#', text: 'FAQ' },
-  { href: '#', text: 'Privacy Policy' },
-  { href: '#', text: 'Terms of Service' },
+  // Array de objetos que define los enlaces de navegación del pie de página.
+  { href: 'https://mariel.miratuwebsi.es/', text: 'About Me' },
+  { href: '../../Contact', text: 'Contact' }
 ];
 
 const socialLinks = [
+  // Array de objetos que define los enlaces a redes sociales.
   {
-    href: '#',
+    href: 'https://www.threads.com/@mirix_dev.cr',
     label: 'Twitter',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
@@ -19,7 +17,7 @@ const socialLinks = [
     ),
   },
   {
-    href: '#',
+    href: 'https://www.instagram.com/mirix_dev.cr?igsh=MXVmeWI0aG8xMHIxZQ==',
     label: 'Instagram',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
@@ -28,7 +26,7 @@ const socialLinks = [
     ),
   },
   {
-    href: '#',
+    href: 'https://www.facebook.com/share/1CwsNsuyBd/',
     label: 'Facebook',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
@@ -40,22 +38,32 @@ const socialLinks = [
 
 function Footer() {
   return (
-    <footer className="bg-[#221a11] flex justify-center px-5 py-10 text-center">
+    // Contenedor principal del pie de página.
+    // Establece el color de fondo, alineación y espaciado.
+    <footer className="bg-[#221a11] flex justify-center px-5 py-10 text-center" style={{ fontFamily: '"Plus Jakarta Sans", "Noto Sans", sans-serif' }}>
       <div className="flex max-w-4xl w-full flex-col items-center gap-6">
+        {/* Sección de enlaces de navegación del pie de página. */}
         <nav className="flex flex-wrap items-center justify-center gap-6 sm:justify-around w-full">
+          {/* Mapea el array `footerLinks` para renderizar cada enlace. */}
           {footerLinks.map((link) => (
-            <a key={link.text} href={link.href} className="text-[#c9ad92] text-base font-normal leading-normal min-w-40">
+            // `key` es importante para la eficiencia de React al renderizar listas.
+            <a key={link.text} href={link.href} className="text-[#c9ad92] text-base font-normal leading-normal min-w-40" aria-label={link.label}>
               {link.text}
             </a>
           ))}
         </nav>
+        {/* Sección de enlaces a redes sociales. */}
         <div className="flex justify-center gap-4">
+          {/* Mapea el array `socialLinks` para renderizar cada icono de red social. */}
           {socialLinks.map((link) => (
-            <a key={link.label} href={link.href} aria-label={link.label}>
+            // `key` es importante para la eficiencia de React.
+            // `aria-label` mejora la accesibilidad para lectores de pantalla.
+            <a key={link.label} href={link.href} target='_blank' aria-label={link.label}>
               <div className="text-[#c9ad92]">{link.icon}</div>
             </a>
           ))}
         </div>
+        {/* Párrafo de derechos de autor. */}
         <p className="text-[#c9ad92] text-base font-normal leading-normal">
           &copy; 2025 Café En Tu Taza. All rights reserved.
         </p>
