@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Café de Origen - Gestión de Fincas</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d47311",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221910",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display antialiased">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#393028] bg-[#181411] px-4 py-3 lg:px-10">
+<div class="flex items-center gap-4 text-white">
+<div class="size-8 text-primary">
+<span class="material-symbols-outlined !text-[32px]">coffee</span>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Café de Origen</h2>
+</div>
+<div class="hidden lg:flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Inicio</a>
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Productores</a>
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Tienda</a>
+<a class="text-primary text-sm font-bold leading-normal" href="#">Gestión</a>
+</div>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-primary hover:bg-opacity-90 transition-colors text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Comprar Ahora</span>
+</button>
+</div>
+<div class="lg:hidden text-white">
+<span class="material-symbols-outlined">menu</span>
+</div>
+</header>
+<main class="flex-grow">
+<div class="@container">
+<div class="p-4 md:px-10 md:py-6">
+<div class="bg-cover bg-center flex flex-col justify-end overflow-hidden bg-[#181411] rounded-xl min-h-[200px] md:min-h-[240px] relative" data-alt="Dark roasted coffee beans background texture" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.2) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCdoAsZ8NW2a8I9kuA0mcunNJ5eFhXvhY4rnIeRl16CZvQKW4lwJpQJ0Ukr8wrWxogBIkfdnvmcR5nYXbCJrDX0105JANMeTdo24gUwLkXoLDCl3Fda_B_3-m8fLyuglywDhk6w85lx9exfFIh97hRc6oDYpshC3V4scZDIFFPEZjTbs7JIva-TzvdVJdSu26W_vbKgrek9w86Q_eauhrFxJ1rYAlH7HhmqUfDUemzv3CP7h8k9FqmIFA5jL5WvYGecNl7x-aYhBdA");'>
+<div class="flex p-6 md:p-10 z-10 flex-col gap-2">
+<h1 class="text-white tracking-tight text-3xl md:text-4xl font-bold leading-tight">Gestión de Fincas</h1>
+<p class="text-gray-200 text-lg font-medium max-w-xl">Administra el inventario de fincas, productores y estados de cultivo.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex justify-center w-full px-4 md:px-10 pb-10">
+<div class="flex flex-col max-w-[1200px] w-full gap-6">
+<div class="flex flex-col lg:flex-row gap-4 justify-between items-center bg-[#221910] p-5 rounded-xl border border-[#393028]">
+<div class="w-full lg:w-96 relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-[#b9ab9d] group-focus-within:text-primary transition-colors">search</span>
+<input class="w-full h-11 pl-12 pr-4 rounded-lg bg-[#27211c] border border-[#54473b] text-white placeholder-[#b9ab9d]/70 focus:ring-1 focus:ring-primary focus:border-primary outline-none transition-all text-sm font-medium shadow-sm" placeholder="Buscar finca, productor..." type="text"/>
+</div>
+<div class="flex flex-wrap items-center gap-3 w-full lg:w-auto">
+<div class="flex items-center gap-2 bg-[#27211c] border border-[#54473b] rounded-lg p-1">
+<button class="px-3 py-1.5 rounded bg-[#393028] text-white text-xs font-bold shadow-sm">Lista</button>
+<button class="px-3 py-1.5 rounded hover:bg-[#393028]/50 text-[#b9ab9d] hover:text-white text-xs font-medium transition-colors">Mapa</button>
+</div>
+<select class="h-11 pl-4 pr-10 rounded-lg bg-[#27211c] border border-[#54473b] text-white text-sm font-medium focus:ring-1 focus:ring-primary focus:border-primary outline-none cursor-pointer">
+<option value="">Todos los Estados</option>
+<option value="active">Activo</option>
+<option value="maintenance">Mantenimiento</option>
+<option value="inactive">Inactivo</option>
+</select>
+<button class="h-11 px-5 rounded-lg bg-primary hover:bg-[#b05f0e] text-white text-sm font-bold flex items-center gap-2 transition-colors shadow-lg shadow-orange-900/20 whitespace-nowrap">
+<span class="material-symbols-outlined text-[20px]">add</span>
+<span>Agregar Finca</span>
+</button>
+</div>
+</div>
+<div class="bg-[#221910] rounded-xl border border-[#393028] overflow-hidden shadow-sm">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-[#393028] bg-[#1e1712]">
+<th class="px-6 py-4 text-xs font-bold text-[#b9ab9d] uppercase tracking-wider">Finca</th>
+<th class="px-6 py-4 text-xs font-bold text-[#b9ab9d] uppercase tracking-wider">Ubicación</th>
+<th class="px-6 py-4 text-xs font-bold text-[#b9ab9d] uppercase tracking-wider">Productor</th>
+<th class="px-6 py-4 text-xs font-bold text-[#b9ab9d] uppercase tracking-wider">Altitud</th>
+<th class="px-6 py-4 text-xs font-bold text-[#b9ab9d] uppercase tracking-wider">Estado</th>
+<th class="px-6 py-4 text-xs font-bold text-[#b9ab9d] uppercase tracking-wider text-right">Acciones</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#393028]">
+<tr class="hover:bg-[#27211c]/50 transition-colors group">
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center gap-4">
+<div class="size-10 rounded-lg bg-[#393028] flex items-center justify-center text-white font-bold text-sm ring-1 ring-white/5">
+                                LE
+                            </div>
+<div class="flex flex-col">
+<span class="text-white font-bold text-sm">La Esperanza</span>
+<span class="text-[#b9ab9d] text-xs">ID: #F-001</span>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-300">Quindío, Colombia</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-300">Carlos Ruiz</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-300">1,600 msnm</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-900/30 text-green-400 border border-green-800/50">
+<span class="w-1.5 h-1.5 rounded-full bg-green-400 mr-1.5"></span>
+                            Activo
+                        </span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-right">
+<div class="flex justify-end gap-2">
+<button class="p-1.5 rounded-md hover:bg-[#393028] text-[#b9ab9d] hover:text-white transition-colors" title="Editar">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="p-1.5 rounded-md hover:bg-red-900/20 text-[#b9ab9d] hover:text-red-400 transition-colors" title="Eliminar">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-[#27211c]/50 transition-colors group">
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center gap-4">
+<div class="size-10 rounded-lg bg-[#393028] flex items-center justify-center text-white font-bold text-sm ring-1 ring-white/5">
+                                HR
+                            </div>
+<div class="flex flex-col">
+<span class="text-white font-bold text-sm">Hacienda El Roble</span>
+<span class="text-[#b9ab9d] text-xs">ID: #F-023</span>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-300">Santander, Colombia</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-300">María González</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-300">1,450 msnm</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-900/30 text-green-400 border border-green-800/50">
+<span class="w-1.5 h-1.5 rounded-full bg-green-400 mr-1.5"></span>
+                            Activo
+                        </span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-right">
+<div class="flex justify-end gap-2">
+<button class="p-1.5 rounded-md hover:bg-[#393028] text-[#b9ab9d] hover:text-white transition-colors" title="Editar">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="p-1.5 rounded-md hover:bg-red-900/20 text-[#b9ab9d] hover:text-red-400 transition-colors" title="Eliminar">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-[#27211c]/50 transition-colors group">
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center gap-4">
+<div class="size-10 rounded-lg bg-[#393028] flex items-center justify-center text-white font-bold text-sm ring-1 ring-white/5">
+                                LP
+                            </div>
+<div class="flex flex-col">
+<span class="text-white font-bold text-sm">Finca Los Pinos</span>
+<span class="text-[#b9ab9d] text-xs">ID: #F-089</span>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-300">Antioquia, Colombia</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-300">Pedro Sánchez</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-300">1,800 msnm</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-900/30 text-yellow-500 border border-yellow-800/50">
+<span class="w-1.5 h-1.5 rounded-full bg-yellow-500 mr-1.5"></span>
+                            Mantenimiento
+                        </span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-right">
+<div class="flex justify-end gap-2">
+<button class="p-1.5 rounded-md hover:bg-[#393028] text-[#b9ab9d] hover:text-white transition-colors" title="Editar">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="p-1.5 rounded-md hover:bg-red-900/20 text-[#b9ab9d] hover:text-red-400 transition-colors" title="Eliminar">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-[#27211c]/50 transition-colors group">
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center gap-4">
+<div class="size-10 rounded-lg bg-[#393028] flex items-center justify-center text-white font-bold text-sm ring-1 ring-white/5">
+                                SA
+                            </div>
+<div class="flex flex-col">
+<span class="text-white font-bold text-sm">San Alberto</span>
+<span class="text-[#b9ab9d] text-xs">ID: #F-104</span>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-300">Quindío, Colombia</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-300">Felipe López</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-300">1,550 msnm</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-900/30 text-green-400 border border-green-800/50">
+<span class="w-1.5 h-1.5 rounded-full bg-green-400 mr-1.5"></span>
+                            Activo
+                        </span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-right">
+<div class="flex justify-end gap-2">
+<button class="p-1.5 rounded-md hover:bg-[#393028] text-[#b9ab9d] hover:text-white transition-colors" title="Editar">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="p-1.5 rounded-md hover:bg-red-900/20 text-[#b9ab9d] hover:text-red-400 transition-colors" title="Eliminar">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center px-6 py-4 border-t border-[#393028] gap-4 bg-[#1e1712]">
+<div class="text-xs text-[#b9ab9d]">
+            Mostrando <span class="font-bold text-white">1</span> a <span class="font-bold text-white">4</span> de <span class="font-bold text-white">12</span> fincas
+         </div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 text-xs font-bold text-[#b9ab9d] bg-[#27211c] border border-[#393028] rounded-md hover:bg-[#393028] hover:text-white transition-colors disabled:opacity-50" disabled="">
+                 Anterior
+             </button>
+<div class="flex gap-1">
+<button class="w-7 h-7 flex items-center justify-center text-xs font-bold text-white bg-primary rounded-md">1</button>
+<button class="w-7 h-7 flex items-center justify-center text-xs font-bold text-[#b9ab9d] hover:bg-[#393028] hover:text-white rounded-md transition-colors">2</button>
+<button class="w-7 h-7 flex items-center justify-center text-xs font-bold text-[#b9ab9d] hover:bg-[#393028] hover:text-white rounded-md transition-colors">3</button>
+</div>
+<button class="px-3 py-1.5 text-xs font-bold text-white bg-[#27211c] border border-[#393028] rounded-md hover:bg-[#393028] transition-colors">
+                 Siguiente
+             </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="mt-auto border-t border-[#393028] bg-[#181411] py-10 px-10">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-[1200px] mx-auto">
+<div class="flex items-center gap-2 text-white">
+<span class="material-symbols-outlined text-primary">coffee</span>
+<span class="font-bold text-lg">Café de Origen</span>
+</div>
+<div class="flex gap-8 text-[#b9ab9d]">
+<a class="text-sm hover:text-primary transition-colors" href="#">Privacidad</a>
+<a class="text-sm hover:text-primary transition-colors" href="#">Términos</a>
+<a class="text-sm hover:text-primary transition-colors" href="#">Cookies</a>
+</div>
+<p class="text-[#b9ab9d] text-sm">© 2023 Café de Origen. Todos los derechos reservados.</p>
+</div>
+</footer>
+</div>
+</body></html>

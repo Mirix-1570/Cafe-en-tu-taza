@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<title>Main Admin Dashboard Overview</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+</head>
+<body class="bg-gray-50 font-sans antialiased text-gray-900">
+<div class="flex h-screen overflow-hidden">
+<aside class="flex w-64 flex-col overflow-y-auto border-r border-gray-200 bg-white">
+<div class="flex h-16 flex-shrink-0 items-center justify-center border-b border-gray-200 px-4">
+<a class="text-xl font-bold text-gray-900 flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-indigo-600">local_cafe</span>
+<span>Coffee Admin</span>
+</a>
+</div>
+<nav class="flex-1 space-y-1 px-3 py-4">
+<a class="bg-indigo-50 text-indigo-700 group flex items-center rounded-md px-3 py-2 text-sm font-medium transition-colors" href="#">
+<span class="material-symbols-outlined mr-3 text-[20px] text-indigo-600">home</span>
+        Dashboard
+      </a>
+<a class="text-gray-700 hover:bg-gray-50 hover:text-gray-900 group flex items-center rounded-md px-3 py-2 text-sm font-medium transition-colors" href="#">
+<span class="material-symbols-outlined mr-3 text-[20px] text-gray-400 group-hover:text-gray-500">group</span>
+        Producers
+      </a>
+<a class="text-gray-700 hover:bg-gray-50 hover:text-gray-900 group flex items-center rounded-md px-3 py-2 text-sm font-medium transition-colors" href="#">
+<span class="material-symbols-outlined mr-3 text-[20px] text-gray-400 group-hover:text-gray-500">park</span>
+        Farms
+      </a>
+<a class="text-gray-700 hover:bg-gray-50 hover:text-gray-900 group flex items-center rounded-md px-3 py-2 text-sm font-medium transition-colors" href="#">
+<span class="material-symbols-outlined mr-3 text-[20px] text-gray-400 group-hover:text-gray-500">coffee</span>
+        Products
+      </a>
+<a class="text-gray-700 hover:bg-gray-50 hover:text-gray-900 group flex items-center rounded-md px-3 py-2 text-sm font-medium transition-colors" href="#">
+<span class="material-symbols-outlined mr-3 text-[20px] text-gray-400 group-hover:text-gray-500">article</span>
+        Blog
+      </a>
+</nav>
+<div class="border-t border-gray-200 p-4">
+<a class="group flex items-center rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors" href="#">
+<span class="material-symbols-outlined mr-3 text-[20px] text-gray-400 group-hover:text-gray-500">logout</span>
+        Logout
+      </a>
+</div>
+</aside>
+<div class="flex flex-1 flex-col overflow-hidden">
+<main class="flex-1 overflow-y-auto p-8">
+<div class="mb-8 flex items-center justify-between">
+<div>
+<h1 class="text-2xl font-bold leading-tight text-gray-900 sm:text-3xl">Dashboard</h1>
+<p class="mt-2 text-sm text-gray-500">Overview of your coffee business performance.</p>
+</div>
+<button class="inline-flex items-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" type="button">
+<span class="material-symbols-outlined mr-2 text-[20px]">download</span>
+          Export Report
+        </button>
+</div>
+<div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 mb-8">
+<div class="overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-gray-900/5">
+<div class="p-4 sm:p-6">
+<div class="flex items-center">
+<div class="flex-shrink-0 rounded-md bg-green-50 p-3">
+<span class="material-symbols-outlined text-green-600">attach_money</span>
+</div>
+<div class="ml-4 w-0 flex-1">
+<dl>
+<dt class="truncate text-sm font-medium text-gray-500">Total Sales</dt>
+<dd class="text-lg font-bold text-gray-900">$25,000</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+<div class="overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-gray-900/5">
+<div class="p-4 sm:p-6">
+<div class="flex items-center">
+<div class="flex-shrink-0 rounded-md bg-blue-50 p-3">
+<span class="material-symbols-outlined text-blue-600">group</span>
+</div>
+<div class="ml-4 w-0 flex-1">
+<dl>
+<dt class="truncate text-sm font-medium text-gray-500">Producers</dt>
+<dd class="text-lg font-bold text-gray-900">150</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+<div class="overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-gray-900/5">
+<div class="p-4 sm:p-6">
+<div class="flex items-center">
+<div class="flex-shrink-0 rounded-md bg-amber-50 p-3">
+<span class="material-symbols-outlined text-amber-600">park</span>
+</div>
+<div class="ml-4 w-0 flex-1">
+<dl>
+<dt class="truncate text-sm font-medium text-gray-500">Farms</dt>
+<dd class="text-lg font-bold text-gray-900">75</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+<div class="overflow-hidden rounded-lg bg-white shadow-sm ring-1 ring-gray-900/5">
+<div class="p-4 sm:p-6">
+<div class="flex items-center">
+<div class="flex-shrink-0 rounded-md bg-purple-50 p-3">
+<span class="material-symbols-outlined text-purple-600">edit_document</span>
+</div>
+<div class="ml-4 w-0 flex-1">
+<dl>
+<dt class="truncate text-sm font-medium text-gray-500">New Blog Posts</dt>
+<dd class="text-lg font-bold text-gray-900">5</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="overflow-hidden bg-white shadow-sm ring-1 ring-gray-900/5 sm:rounded-lg">
+<div class="border-b border-gray-200 px-4 py-5 sm:px-6">
+<h3 class="text-base font-semibold leading-6 text-gray-900">Recent Activities</h3>
+</div>
+<div class="overflow-x-auto">
+<table class="min-w-full divide-y divide-gray-300">
+<thead class="bg-gray-50">
+<tr>
+<th class="py-3.5 pl-4 pr-3 text-left text-xs font-semibold uppercase tracking-wide text-gray-500 sm:pl-6" scope="col">Date</th>
+<th class="px-3 py-3.5 text-left text-xs font-semibold uppercase tracking-wide text-gray-500" scope="col">Activity</th>
+<th class="px-3 py-3.5 text-left text-xs font-semibold uppercase tracking-wide text-gray-500" scope="col">Details</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-gray-200 bg-white">
+<tr class="hover:bg-gray-50 transition-colors">
+<td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">2024-03-15</td>
+<td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+<span class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">New Producer Added</span>
+</td>
+<td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Producer: Ethan Carter</td>
+</tr>
+<tr class="hover:bg-gray-50 transition-colors">
+<td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">2024-03-14</td>
+<td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+<span class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">Farm Registered</span>
+</td>
+<td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Farm: Green Valley</td>
+</tr>
+<tr class="hover:bg-gray-50 transition-colors">
+<td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">2024-03-13</td>
+<td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+<span class="inline-flex items-center rounded-md bg-amber-50 px-2 py-1 text-xs font-medium text-amber-700 ring-1 ring-inset ring-amber-600/20">Product Added</span>
+</td>
+<td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Product: Premium Blend</td>
+</tr>
+<tr class="hover:bg-gray-50 transition-colors">
+<td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">2024-03-12</td>
+<td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+<span class="inline-flex items-center rounded-md bg-purple-50 px-2 py-1 text-xs font-medium text-purple-700 ring-1 ring-inset ring-purple-700/10">Blog Post Published</span>
+</td>
+<td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Post: The Art of Coffee Tasting</td>
+</tr>
+<tr class="hover:bg-gray-50 transition-colors">
+<td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">2024-03-11</td>
+<td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+<span class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">Order Placed</span>
+</td>
+<td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Order ID: 12345</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

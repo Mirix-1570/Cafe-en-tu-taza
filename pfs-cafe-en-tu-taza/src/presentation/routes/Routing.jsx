@@ -1,7 +1,7 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from '../pages/Publicas/Home';
-import Login from '../pages/Publicas/Login';
+import Login from '../pages/Publicas/LogIn';
 import SignIn from '../pages/Publicas/SignIn';
 import Coffee from '../pages/Publicas/Coffee';
 import Community from '../pages/Publicas/Community';
@@ -11,6 +11,7 @@ const Routing = () => {
     return (
        <Router>
         <Routes>
+            <Route path='/' element={<Home />} />
             <Route path='/Home' element={<Home />} />
             <Route path='/Login' element={<Login />} />
             <Route path='/SignIn' element={<SignIn />} />

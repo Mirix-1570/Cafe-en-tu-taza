@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Café de Origen - Gestión de Productores</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d47311",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221910",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display antialiased">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#393028] bg-[#181411] px-4 py-3 lg:px-10">
+<div class="flex items-center gap-4 text-white">
+<div class="size-8 text-primary">
+<span class="material-symbols-outlined !text-[32px]">coffee</span>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Café de Origen</h2>
+</div>
+<div class="hidden lg:flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Inicio</a>
+<a class="text-primary text-sm font-bold leading-normal" href="#">Productores</a>
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Tienda</a>
+<a class="text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Contacto</a>
+</div>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-primary hover:bg-opacity-90 transition-colors text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Comprar Ahora</span>
+</button>
+</div>
+<div class="lg:hidden text-white">
+<span class="material-symbols-outlined">menu</span>
+</div>
+</header>
+<main class="flex-grow bg-[#181411]">
+<div class="layout-container flex justify-center w-full px-4 md:px-10 py-8">
+<div class="layout-content-container flex flex-col max-w-[1200px] w-full gap-8">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+<div>
+<h1 class="text-white text-3xl font-bold leading-tight">Gestión de Productores</h1>
+<p class="text-[#b9ab9d] text-base mt-1">Administra la base de datos de productores, fincas y certificaciones.</p>
+</div>
+<button class="flex items-center gap-2 bg-primary hover:bg-[#b05f0e] text-white px-5 py-3 rounded-lg font-bold text-sm transition-all shadow-lg hover:shadow-orange-900/20">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span>Añadir Nuevo Productor</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="bg-[#221910] border border-[#393028] p-5 rounded-xl flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-[#27211c] border border-[#393028] flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">groups</span>
+</div>
+<div>
+<p class="text-[#b9ab9d] text-sm font-medium">Total Productores</p>
+<p class="text-white text-2xl font-bold">124</p>
+</div>
+</div>
+<div class="bg-[#221910] border border-[#393028] p-5 rounded-xl flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-[#27211c] border border-[#393028] flex items-center justify-center text-emerald-500">
+<span class="material-symbols-outlined">check_circle</span>
+</div>
+<div>
+<p class="text-[#b9ab9d] text-sm font-medium">Activos</p>
+<p class="text-white text-2xl font-bold">98</p>
+</div>
+</div>
+<div class="bg-[#221910] border border-[#393028] p-5 rounded-xl flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-[#27211c] border border-[#393028] flex items-center justify-center text-amber-500">
+<span class="material-symbols-outlined">star</span>
+</div>
+<div>
+<p class="text-[#b9ab9d] text-sm font-medium">Calidad Promedio</p>
+<p class="text-white text-2xl font-bold">86.5</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col md:flex-row gap-4 bg-[#221910] p-4 rounded-xl border border-[#393028]">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[#b9ab9d]">search</span>
+<input class="w-full bg-[#181411] border border-[#393028] rounded-lg h-10 pl-10 pr-4 text-white text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary placeholder:text-[#b9ab9d]/60 transition-colors" placeholder="Buscar por nombre, finca o ubicación..." type="text"/>
+</div>
+<div class="flex gap-4">
+<select class="bg-[#181411] border border-[#393028] text-white text-sm rounded-lg h-10 px-4 focus:outline-none focus:border-primary transition-colors cursor-pointer">
+<option>Todos los estados</option>
+<option>Activo</option>
+<option>Inactivo</option>
+<option>Pendiente</option>
+</select>
+<select class="bg-[#181411] border border-[#393028] text-white text-sm rounded-lg h-10 px-4 focus:outline-none focus:border-primary transition-colors cursor-pointer">
+<option>Ordenar por</option>
+<option>Nombre (A-Z)</option>
+<option>Fecha de registro</option>
+<option>Calidad</option>
+</select>
+</div>
+</div>
+<div class="bg-[#221910] border border-[#393028] rounded-xl overflow-hidden shadow-sm">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-[#27211c] border-b border-[#393028]">
+<th class="p-4 text-[#b9ab9d] font-semibold text-xs uppercase tracking-wider">Productor</th>
+<th class="p-4 text-[#b9ab9d] font-semibold text-xs uppercase tracking-wider">Ubicación</th>
+<th class="p-4 text-[#b9ab9d] font-semibold text-xs uppercase tracking-wider">Cultivos</th>
+<th class="p-4 text-[#b9ab9d] font-semibold text-xs uppercase tracking-wider">Estado</th>
+<th class="p-4 text-[#b9ab9d] font-semibold text-xs uppercase tracking-wider text-right">Acciones</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#393028]">
+<tr class="hover:bg-[#2c241b] transition-colors group">
+<td class="p-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-[#393028] flex items-center justify-center text-white font-bold text-sm border border-[#54473b]">
+                                                JR
+                                            </div>
+<div>
+<p class="text-white font-medium text-sm">Juan Ramirez</p>
+<p class="text-[#b9ab9d] text-xs">Finca La Esperanza</p>
+</div>
+</div>
+</td>
+<td class="p-4">
+<p class="text-white text-sm">Salento, Quindío</p>
+<p class="text-[#b9ab9d] text-xs">1,850 msnm</p>
+</td>
+<td class="p-4">
+<div class="flex flex-wrap gap-1">
+<span class="px-2 py-0.5 rounded text-[10px] font-medium bg-[#393028] text-[#b9ab9d] border border-[#54473b]">Castillo</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-medium bg-[#393028] text-[#b9ab9d] border border-[#54473b]">Caturra</span>
+</div>
+</td>
+<td class="p-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Activo
+                                        </span>
+</td>
+<td class="p-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 text-[#b9ab9d] hover:text-white hover:bg-[#393028] rounded-md transition-colors" title="Ver perfil">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 text-[#b9ab9d] hover:text-primary hover:bg-[#393028] rounded-md transition-colors" title="Editar">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 text-[#b9ab9d] hover:text-red-400 hover:bg-[#393028] rounded-md transition-colors" title="Desactivar">
+<span class="material-symbols-outlined text-[18px]">block</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-[#2c241b] transition-colors group">
+<td class="p-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-[#393028] flex items-center justify-center text-white font-bold text-sm border border-[#54473b]">
+                                                MV
+                                            </div>
+<div>
+<p class="text-white font-medium text-sm">Maria Valencia</p>
+<p class="text-[#b9ab9d] text-xs">Hacienda El Roble</p>
+</div>
+</div>
+</td>
+<td class="p-4">
+<p class="text-white text-sm">Pijao, Quindío</p>
+<p class="text-[#b9ab9d] text-xs">1,650 msnm</p>
+</td>
+<td class="p-4">
+<div class="flex flex-wrap gap-1">
+<span class="px-2 py-0.5 rounded text-[10px] font-medium bg-[#393028] text-[#b9ab9d] border border-[#54473b]">Geisha</span>
+</div>
+</td>
+<td class="p-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-amber-500/10 text-amber-400 border border-amber-500/20">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span> Pendiente
+                                        </span>
+</td>
+<td class="p-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 text-[#b9ab9d] hover:text-white hover:bg-[#393028] rounded-md transition-colors" title="Ver perfil">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 text-[#b9ab9d] hover:text-primary hover:bg-[#393028] rounded-md transition-colors" title="Editar">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 text-[#b9ab9d] hover:text-red-400 hover:bg-[#393028] rounded-md transition-colors" title="Desactivar">
+<span class="material-symbols-outlined text-[18px]">block</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-[#2c241b] transition-colors group">
+<td class="p-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-[#393028] flex items-center justify-center text-white font-bold text-sm border border-[#54473b]">
+                                                CO
+                                            </div>
+<div>
+<p class="text-white font-medium text-sm">Carlos Osorio</p>
+<p class="text-[#b9ab9d] text-xs">Finca Los Andes</p>
+</div>
+</div>
+</td>
+<td class="p-4">
+<p class="text-white text-sm">Buenavista, Quindío</p>
+<p class="text-[#b9ab9d] text-xs">1,720 msnm</p>
+</td>
+<td class="p-4">
+<div class="flex flex-wrap gap-1">
+<span class="px-2 py-0.5 rounded text-[10px] font-medium bg-[#393028] text-[#b9ab9d] border border-[#54473b]">Bourbon</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-medium bg-[#393028] text-[#b9ab9d] border border-[#54473b]">Colombia</span>
+</div>
+</td>
+<td class="p-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-red-500/10 text-red-400 border border-red-500/20">
+<span class="w-1.5 h-1.5 rounded-full bg-red-400"></span> Inactivo
+                                        </span>
+</td>
+<td class="p-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 text-[#b9ab9d] hover:text-white hover:bg-[#393028] rounded-md transition-colors" title="Ver perfil">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 text-[#b9ab9d] hover:text-primary hover:bg-[#393028] rounded-md transition-colors" title="Editar">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 text-[#b9ab9d] hover:text-red-400 hover:bg-[#393028] rounded-md transition-colors" title="Desactivar">
+<span class="material-symbols-outlined text-[18px]">block</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-[#2c241b] transition-colors group">
+<td class="p-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-[#393028] flex items-center justify-center text-white font-bold text-sm border border-[#54473b]">
+                                                EP
+                                            </div>
+<div>
+<p class="text-white font-medium text-sm">Elena Perez</p>
+<p class="text-[#b9ab9d] text-xs">Finca El Recuerdo</p>
+</div>
+</div>
+</td>
+<td class="p-4">
+<p class="text-white text-sm">Córdoba, Quindío</p>
+<p class="text-[#b9ab9d] text-xs">1,500 msnm</p>
+</td>
+<td class="p-4">
+<div class="flex flex-wrap gap-1">
+<span class="px-2 py-0.5 rounded text-[10px] font-medium bg-[#393028] text-[#b9ab9d] border border-[#54473b]">Castillo</span>
+</div>
+</td>
+<td class="p-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Activo
+                                        </span>
+</td>
+<td class="p-4 text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 text-[#b9ab9d] hover:text-white hover:bg-[#393028] rounded-md transition-colors" title="Ver perfil">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 text-[#b9ab9d] hover:text-primary hover:bg-[#393028] rounded-md transition-colors" title="Editar">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 text-[#b9ab9d] hover:text-red-400 hover:bg-[#393028] rounded-md transition-colors" title="Desactivar">
+<span class="material-symbols-outlined text-[18px]">block</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="bg-[#221910] border-t border-[#393028] px-4 py-3 flex items-center justify-between sm:px-6">
+<div class="flex-1 flex justify-between sm:hidden">
+<a class="relative inline-flex items-center px-4 py-2 border border-[#393028] text-sm font-medium rounded-md text-[#b9ab9d] bg-[#181411] hover:bg-[#393028] hover:text-white" href="#">Anterior</a>
+<a class="ml-3 relative inline-flex items-center px-4 py-2 border border-[#393028] text-sm font-medium rounded-md text-[#b9ab9d] bg-[#181411] hover:bg-[#393028] hover:text-white" href="#">Siguiente</a>
+</div>
+<div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
+<div>
+<p class="text-sm text-[#b9ab9d]">
+                                    Mostrando <span class="font-medium text-white">1</span> a <span class="font-medium text-white">4</span> de <span class="font-medium text-white">24</span> resultados
+                                </p>
+</div>
+<div>
+<nav aria-label="Pagination" class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px">
+<a class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-[#393028] bg-[#181411] text-sm font-medium text-[#b9ab9d] hover:bg-[#393028] hover:text-white transition-colors" href="#">
+<span class="sr-only">Anterior</span>
+<span class="material-symbols-outlined text-[20px]">chevron_left</span>
+</a>
+<a aria-current="page" class="relative inline-flex items-center px-4 py-2 border border-[#393028] bg-[#221910] text-sm font-medium text-primary border-b-2 border-b-primary z-10" href="#">1</a>
+<a class="relative inline-flex items-center px-4 py-2 border border-[#393028] bg-[#181411] text-sm font-medium text-[#b9ab9d] hover:bg-[#393028] hover:text-white transition-colors" href="#">2</a>
+<a class="relative inline-flex items-center px-4 py-2 border border-[#393028] bg-[#181411] text-sm font-medium text-[#b9ab9d] hover:bg-[#393028] hover:text-white transition-colors" href="#">3</a>
+<span class="relative inline-flex items-center px-4 py-2 border border-[#393028] bg-[#181411] text-sm font-medium text-[#b9ab9d]">...</span>
+<a class="relative inline-flex items-center px-4 py-2 border border-[#393028] bg-[#181411] text-sm font-medium text-[#b9ab9d] hover:bg-[#393028] hover:text-white transition-colors" href="#">6</a>
+<a class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-[#393028] bg-[#181411] text-sm font-medium text-[#b9ab9d] hover:bg-[#393028] hover:text-white transition-colors" href="#">
+<span class="sr-only">Siguiente</span>
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</a>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="mt-auto border-t border-[#393028] bg-[#181411] py-10 px-10">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-[1200px] mx-auto">
+<div class="flex items-center gap-2 text-white">
+<span class="material-symbols-outlined text-primary">coffee</span>
+<span class="font-bold text-lg">Café de Origen</span>
+</div>
+<div class="flex gap-8 text-[#b9ab9d]">
+<a class="text-sm hover:text-primary transition-colors" href="#">Privacidad</a>
+<a class="text-sm hover:text-primary transition-colors" href="#">Términos</a>
+<a class="text-sm hover:text-primary transition-colors" href="#">Cookies</a>
+</div>
+<p class="text-[#b9ab9d] text-sm">© 2023 Café de Origen. Todos los derechos reservados.</p>
+</div>
+</footer>
+</div>
+
+</body></html>

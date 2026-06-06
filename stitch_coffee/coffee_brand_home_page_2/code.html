@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', '"Noto Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans antialiased">
+<nav class="sticky top-0 z-50 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 border-b border-gray-200">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<div class="flex h-16 items-center justify-between">
+<a class="flex items-center gap-2 group" href="#">
+<div class="text-blue-600 group-hover:text-blue-700 transition-colors">
+<svg class="h-8 w-8" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_330)">
+<path clip-rule="evenodd" d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z" fill="currentColor" fill-rule="evenodd"></path>
+</g>
+<defs>
+<clipPath id="clip0_6_330"><rect fill="white" height="48" width="48"></rect></clipPath>
+</defs>
+</svg>
+</div>
+<span class="text-xl font-bold tracking-tight text-gray-900">Brewed Bliss</span>
+</a>
+<div class="hidden md:flex flex-1 items-center justify-center">
+<div class="flex space-x-8">
+<a class="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors" href="#">Shop</a>
+<a class="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors" href="#">Learn</a>
+<a class="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors" href="#">Visit</a>
+<a class="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors" href="#">Stories</a>
+</div>
+</div>
+<div class="hidden md:flex items-center gap-4">
+<button class="group flex items-center gap-2 rounded-full border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all">
+<span>Cart</span>
+<span class="flex h-5 w-5 items-center justify-center rounded-full bg-gray-100 text-xs text-gray-600 group-hover:bg-blue-100 group-hover:text-blue-600">0</span>
+</button>
+<button class="p-2 text-gray-500 hover:text-blue-600 transition-colors">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+<div class="h-9 w-9 overflow-hidden rounded-full border border-gray-200 shadow-sm">
+<div class="h-full w-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAt2udgVddoSE2wbPQeHfdWU5NTBpGyz2YegiaWKHFDRL6auRdoGvbJVgD1lZzluUp21hNF5W4LzFvPZIzLQTF0HWmTGZ1Fmjj7gbs4ag9phjfNEKTEwLPkj0gyMRCt-7qZ8Rdl9yTI6bdSXLglr6ytz5csJ4aIU5kc5ax3dPMf6vetHKk6IeCMuiCx3Z_Qs6Q_QlWFqD6wKPhwgfkdSI7Fpxe39PFVgsV0DAc6BGM0pyW_Unptq2EICNyLpWCPz8qOL0br-L9f_pw");'></div>
+</div>
+</div>
+<div class="flex md:hidden">
+<button class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700" type="button">
+<span class="sr-only">Open main menu</span>
+<svg aria-hidden="true" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<main>
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6">
+<div class="relative overflow-hidden rounded-3xl bg-gray-900 isolate shadow-2xl">
+<div class="absolute inset-0 -z-10 h-full w-full">
+<img alt="Coffee Background" class="h-full w-full object-cover opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByiS5BzLn4kf3nr4qxk-Gw0luz80bRDJr-5hpLo-oV3-YsVzg77QD8pnC3nGndOLqQZc3l5aLDn5xhIgzMQhlnsLPSwFkzSl2_omOR-aKww8gM6GyEjO83bvK5iC4JNiJJGQd3t8husn5AB5iYzm9y9lkYWLwWvtUufK5CBv0v-qrNS4CmMmbnqaAo6Aae8d4G1osIAZvVAklgH0oFfAdvgFPb1WV-dmUePuGL1GjB8cwVr2RN79uZODYwNBHe51HAyex8Og4u1aA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent"></div>
+</div>
+<div class="relative mx-auto max-w-2xl py-32 sm:py-48 lg:py-56 text-center px-6">
+<h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl mb-6">Discover the Art of Coffee</h1>
+<p class="mt-6 text-lg leading-8 text-gray-100 max-w-xl mx-auto font-light">
+                        From bean to cup, explore the journey of our ethically sourced coffee. Experience the rich flavors and aromas that define our craft.
+                    </p>
+<div class="mt-10 flex items-center justify-center gap-x-6">
+<button class="rounded-full bg-blue-600 px-8 py-3.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all hover:scale-105">
+                            Shop Now
+                        </button>
+</div>
+</div>
+</div>
+</div>
+<section class="py-16 sm:py-24">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between mb-10">
+<h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Featured Coffees</h2>
+<a class="hidden sm:block text-sm font-semibold text-blue-600 hover:text-blue-500" href="#">View all products <span aria-hidden="true">→</span></a>
+</div>
+<div class="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
+<div class="group relative flex flex-col overflow-hidden rounded-2xl bg-white border border-gray-100 shadow-sm transition-all hover:shadow-xl hover:-translate-y-1 duration-300">
+<div class="aspect-[4/3] w-full overflow-hidden bg-gray-200 group-hover:opacity-90 transition-opacity">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA3ObU_qMHDCjRGw3AzgarvATmCk7k0hx-krNQLHweHCnRrE697unTsy1SAF1vzYe7YlsY_sVOb4XM9yAC4Vl0P-MuWx1YTx-E_MVssVSKav8MemuxuiKdwO0pqbNHiC36nuGWUVgpO0y1X1M9bpNuDEGUQOfuL0D7tBtfn1z8D2qwOrCumaT8Xnwe9bFxliKmyrd91qX0pov7bpVYF_ZEGIGwjv4ZqqYlRobIZoLn4iT56shdBU0SX5ZhGNniNwmQ3lDGLBCTJcHI");'></div>
+</div>
+<div class="flex flex-1 flex-col p-6">
+<h3 class="text-lg font-bold text-gray-900">
+<a href="#">
+<span aria-hidden="true" class="absolute inset-0"></span>
+                                    Ethiopian Yirgacheffe
+                                </a>
+</h3>
+<p class="mt-2 text-sm text-gray-500 flex-1">A light-bodied coffee with floral and citrus notes.</p>
+<div class="mt-4 flex items-center text-blue-600 text-sm font-medium">
+                                Shop Now 
+                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+</div>
+</div>
+<div class="group relative flex flex-col overflow-hidden rounded-2xl bg-white border border-gray-100 shadow-sm transition-all hover:shadow-xl hover:-translate-y-1 duration-300">
+<div class="aspect-[4/3] w-full overflow-hidden bg-gray-200 group-hover:opacity-90 transition-opacity">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAONNI-fPDdElUA8FaFZ_bxcN-2aqRkmwPoZX717jmCyfNCRal0wKUDFfbQAZWNLAPrXjYOY9H_EpzAOvl2BjqRAcWo8-6prVvA6tPYF8sVJ8oqhR8xRI1PNANdPDjRh83mdhnxNAzppZ40DowY7SdR8qp07Iuu-_CxN_PxS5oUrlBcfXuYON296X8NqmvfOcd7rNxOpxQAyS9dFSe6-wTSepLFdLRKoVabiKDGSG9exD9Wn4yM30f61EImQc3pV6KF5R2FQNXi_E0");'></div>
+</div>
+<div class="flex flex-1 flex-col p-6">
+<h3 class="text-lg font-bold text-gray-900">
+<a href="#">
+<span aria-hidden="true" class="absolute inset-0"></span>
+                                    Guatemalan Antigua
+                                </a>
+</h3>
+<p class="mt-2 text-sm text-gray-500 flex-1">A balanced coffee with chocolate and caramel flavors.</p>
+<div class="mt-4 flex items-center text-blue-600 text-sm font-medium">
+                                Shop Now 
+                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+</div>
+</div>
+<div class="group relative flex flex-col overflow-hidden rounded-2xl bg-white border border-gray-100 shadow-sm transition-all hover:shadow-xl hover:-translate-y-1 duration-300">
+<div class="aspect-[4/3] w-full overflow-hidden bg-gray-200 group-hover:opacity-90 transition-opacity">
+<div class="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAY9BVQGz1qRC9rH4eBiAmi4St9Xfe0njpKmE6Q6TQTCnhw53x-8DnQ4X7ulgXAYb9yLRHNfvAiox4f2c78S4RpLfVdT4_FRn6x-zW5WMDBk380URvn_1bXGPGUMVLJcLtfM7i6J9uAwqZAVdwu2WNDyjUOhyHBJoK3I2HGKdIZRWPynOzsHo_c1OI_apzoekrruImzihJL8f7w0WWG6Uu2LCHoG5dNeoGqQN4AlyeZ7a1tW1sGlqy0OfhY791heV4Os8PXJGJzpiw");'></div>
+</div>
+<div class="flex flex-1 flex-col p-6">
+<h3 class="text-lg font-bold text-gray-900">
+<a href="#">
+<span aria-hidden="true" class="absolute inset-0"></span>
+                                    Sumatran Mandheling
+                                </a>
+</h3>
+<p class="mt-2 text-sm text-gray-500 flex-1">A full-bodied coffee with earthy and spicy notes.</p>
+<div class="mt-4 flex items-center text-blue-600 text-sm font-medium">
+                                Shop Now 
+                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-8 sm:hidden">
+<a class="block text-sm font-semibold text-blue-600 hover:text-blue-500" href="#">View all products <span aria-hidden="true">→</span></a>
+</div>
+</div>
+</section>
+<section class="bg-gray-100 py-16 sm:py-24">
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<div class="mx-auto max-w-2xl text-center mb-12">
+<h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Latest from the Blog</h2>
+<p class="mt-2 text-lg text-gray-600">Expert tips, brewing guides, and coffee culture.</p>
+</div>
+<div class="grid grid-cols-1 gap-y-12 gap-x-8 sm:grid-cols-2 lg:grid-cols-3">
+<article class="flex flex-col items-start bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300">
+<div class="relative w-full aspect-video">
+<div class="absolute inset-0 h-full w-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAMMNpxSwCp0IsTTGecVV3_ZZkZ1EezUNCIktFKwGjVqFcKX0H-re3cPIfHBHyB8YCpznhEfnM0PqtPHvxAT19W7_Yu25Khp3Rv_D00zLHS7IjPVNZIRQimx5oeil3y0qfilywbZxYAx4TqTPLseDAgWnNiAXHmkus669AJIscZYWEWfsxkIkb8jhTXFcIHqf3WPHMpYWk2qNmOBhJ2gaDhjcZLMzrZCMG4o0CLtYIDuaiM1n7Tk-hQgDdxTxYH6TVXjhhUdf6B1vs");'></div>
+</div>
+<div class="flex flex-1 flex-col p-6">
+<div class="flex items-center gap-x-4 text-xs">
+<time class="text-gray-500" datetime="2020-03-16">Mar 16, 2024</time>
+<a class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100" href="#">Brewing</a>
+</div>
+<div class="group relative">
+<h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
+<a href="#">
+<span class="absolute inset-0"></span>
+                                        Perfect Pour-Over Coffee
+                                    </a>
+</h3>
+<p class="mt-2 line-clamp-3 text-sm leading-6 text-gray-600">Master the art of pour-over coffee with our step-by-step guide.</p>
+</div>
+</div>
+</article>
+<article class="flex flex-col items-start bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300">
+<div class="relative w-full aspect-video">
+<div class="absolute inset-0 h-full w-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBZZ6d4qC5t-vbCuCUm--zBACvZqLk1k1SdZ4wHLqyfcqjqINEJGVT0M9McvXlg2py_h86nKwTNvtGYzraN9u9urgzb1Bw3rHmmZpZr0U7AFfpoiQysuZeP70G5SzYbghha3VgeOXh0k603iVIKgIblRA9tXplge0Tjhd1nmi49bJpDXpkPAKlEPBvy0UiNrDTcomKFb0-dfdzMvVo31Y2dcN6eBRPZgWM7fS7eE3ejppMJBqh8M0OIN0YUsj7F2IZCf1_TE-Dz3EQ");'></div>
+</div>
+<div class="flex flex-1 flex-col p-6">
+<div class="flex items-center gap-x-4 text-xs">
+<time class="text-gray-500" datetime="2020-03-10">Mar 10, 2024</time>
+<a class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100" href="#">Science</a>
+</div>
+<div class="group relative">
+<h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
+<a href="#">
+<span class="absolute inset-0"></span>
+                                        The Science of Coffee Roasting
+                                    </a>
+</h3>
+<p class="mt-2 line-clamp-3 text-sm leading-6 text-gray-600">Learn about the chemical reactions that create the unique flavors of coffee.</p>
+</div>
+</div>
+</article>
+<article class="flex flex-col items-start bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300">
+<div class="relative w-full aspect-video">
+<div class="absolute inset-0 h-full w-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDjD3aDIwIj9AeKfTOhwVbsSVTC0B6eVIhr0xZ7Sl1bW8fmzx9JA38onLsRCOsyQc8MFkYoJgyty9QmirhFOAgJXh5gEZmFPu_Jvzh2ovOJNuEOtsn7lodetwfNAKl4BSTLE4h_vcmzK5bdnvma-6Oh6gMpGVYI6Wg3__ovOcRdaKuH1gX8ec6F8ERRJtiyp7oypXmrKMNu6rRfEMhyrDAyuhZU1CBOMVoNpXWe16AzsbiOpOpfCtMDgL7H_DTKHwUSL4ahXPDrCBE");'></div>
+</div>
+<div class="flex flex-1 flex-col p-6">
+<div class="flex items-center gap-x-4 text-xs">
+<time class="text-gray-500" datetime="2020-02-12">Feb 12, 2024</time>
+<a class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100" href="#">Pairing</a>
+</div>
+<div class="group relative">
+<h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
+<a href="#">
+<span class="absolute inset-0"></span>
+                                        Coffee and Food Pairings
+                                    </a>
+</h3>
+<p class="mt-2 line-clamp-3 text-sm leading-6 text-gray-600">Discover the best food pairings to complement your favorite coffee.</p>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-white border-t border-gray-200">
+<div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+<div class="flex flex-wrap justify-center gap-x-8 gap-y-4 text-sm text-gray-500 mb-8">
+<a class="hover:text-gray-900 transition-colors" href="#">About Us</a>
+<a class="hover:text-gray-900 transition-colors" href="#">Contact</a>
+<a class="hover:text-gray-900 transition-colors" href="#">FAQ</a>
+<a class="hover:text-gray-900 transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-gray-900 transition-colors" href="#">Terms of Service</a>
+</div>
+<div class="flex justify-center gap-6 mb-8">
+<a class="text-gray-400 hover:text-gray-500 transition-colors" href="#">
+<span class="sr-only">Facebook</span>
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 256 256">
+<path d="M247.39,68.94A8,8,0,0,0,240,64H209.57A48.66,48.66,0,0,0,168.1,40a46.91,46.91,0,0,0-33.75,13.7A47.9,47.9,0,0,0,120,88v6.09C79.74,83.47,46.81,50.72,46.46,50.37a8,8,0,0,0-13.65,4.92c-4.31,47.79,9.57,79.77,22,98.18a110.93,110.93,0,0,0,21.88,24.2c-15.23,17.53-39.21,26.74-39.47,26.84a8,8,0,0,0-3.85,11.93c.75,1.12,3.75,5.05,11.08,8.72C53.51,229.7,65.48,232,80,232c70.67,0,129.72-54.42,135.75-124.44l29.91-29.9A8,8,0,0,0,247.39,68.94Zm-45,29.41a8,8,0,0,0-2.32,5.14C196,166.58,143.28,216,80,216c-10.56,0-18-1.4-23.22-3.08,11.51-6.25,27.56-17,37.88-32.48A8,8,0,0,0,92,169.08c-.47-.27-43.91-26.34-44-96,16,13,45.25,33.17,78.67,38.79A8,8,0,0,0,136,104V88a32,32,0,0,1,9.6-22.92A30.94,30.94,0,0,1,167.9,56c12.66.16,24.49,7.88,29.44,19.21A8,8,0,0,0,204.67,80h16Z"></path>
+</svg>
+</a>
+<a class="text-gray-400 hover:text-gray-500 transition-colors" href="#">
+<span class="sr-only">Instagram</span>
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 256 256">
+<path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"></path>
+</svg>
+</a>
+<a class="text-gray-400 hover:text-gray-500 transition-colors" href="#">
+<span class="sr-only">Twitter</span>
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 256 256">
+<path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"></path>
+</svg>
+</a>
+</div>
+<p class="text-center text-xs leading-5 text-gray-500">© 2024 Brewed Bliss. All rights reserved.</p>
+</div>
+</footer>
+
+</body></html>

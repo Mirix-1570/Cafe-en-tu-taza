@@ -1,0 +1,194 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800"
+    />
+
+    <title>Stitch Design</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div
+      class="relative flex h-auto min-h-screen w-full flex-col bg-[#221a11] dark group/design-root overflow-x-hidden"
+      style='font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;'
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#483623] px-10 py-3">
+          <div class="flex items-center gap-4 text-white">
+            <div class="size-4">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z" fill="currentColor"></path></svg>
+            </div>
+            <h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Brewtiful</h2>
+          </div>
+          <div class="flex flex-1 justify-end gap-8">
+            <div class="flex items-center gap-9">
+              <a class="text-white text-sm font-medium leading-normal" href="#">Shop</a>
+              <a class="text-white text-sm font-medium leading-normal" href="#">Subscriptions</a>
+              <a class="text-white text-sm font-medium leading-normal" href="#">Learn</a>
+              <a class="text-white text-sm font-medium leading-normal" href="#">Locations</a>
+            </div>
+            <div class="flex gap-2">
+              <button
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#483623] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+              >
+                <span class="truncate">Log in</span>
+              </button>
+              <button
+                class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-[#483623] text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5"
+              >
+                <div class="text-white" data-icon="MagnifyingGlass" data-size="20px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                      d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
+                    ></path>
+                  </svg>
+                </div>
+              </button>
+              <button
+                class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-[#483623] text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5"
+              >
+                <div class="text-white" data-icon="ShoppingBag" data-size="20px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                      d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,160H40V56H216V200ZM176,88a48,48,0,0,1-96,0,8,8,0,0,1,16,0,32,32,0,0,0,64,0,8,8,0,0,1,16,0Z"
+                    ></path>
+                  </svg>
+                </div>
+              </button>
+            </div>
+          </div>
+        </header>
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="flex flex-wrap justify-between gap-3 p-4"><p class="text-white tracking-light text-[32px] font-bold leading-tight min-w-72">The Brewtiful Blog</p></div>
+            <div class="px-4 py-3">
+              <label class="flex flex-col min-w-40 h-12 w-full">
+                <div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+                  <div
+                    class="text-[#c9ad92] flex border-none bg-[#483623] items-center justify-center pl-4 rounded-l-lg border-r-0"
+                    data-icon="MagnifyingGlass"
+                    data-size="24px"
+                    data-weight="regular"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <input
+                    placeholder="Search articles"
+                    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border-none bg-[#483623] focus:border-none h-full placeholder:text-[#c9ad92] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
+                    value=""
+                  />
+                </div>
+              </label>
+            </div>
+            <div class="flex gap-3 p-3 flex-wrap pr-4">
+              <div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#483623] pl-4 pr-4">
+                <p class="text-white text-sm font-medium leading-normal">All</p>
+              </div>
+              <div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#483623] pl-4 pr-4">
+                <p class="text-white text-sm font-medium leading-normal">Recipes</p>
+              </div>
+              <div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#483623] pl-4 pr-4">
+                <p class="text-white text-sm font-medium leading-normal">Brewing Tips</p>
+              </div>
+              <div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#483623] pl-4 pr-4">
+                <p class="text-white text-sm font-medium leading-normal">News</p>
+              </div>
+            </div>
+            <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD6qYIpwQAKGxBeOuq0XLvSFPlV-QBg0jgs7r5Le1zRdbtaG_WX-ogIqBXIWdk5pYWn9uT_najnpz8mLPvwrmkEtgyMR-8GK-t6A4eu9ExjxwkAbSgNd8Ely3zOMbnp5dX7hz6KY9rJ0lfw-Zxm9XwoHg3xXebJL2FjGplHuIHKyLD_yg1K95DFu3zxK5E_akPSBMVlipwFQtL717CDaZaTFPfCGNK6vtrG5kgpbdpiqaeAY4vNUDXaztmXtt-6ItvDAS3RZwintHk");'
+                ></div>
+                <div>
+                  <p class="text-white text-base font-medium leading-normal">Perfect Pour-Over Coffee</p>
+                  <p class="text-[#c9ad92] text-sm font-normal leading-normal">A step-by-step guide to brewing the perfect pour-over coffee at home.</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDHUe-sKG5HOOEJn3bWQzjwYh7YhbTv-xYiYAV-acVvGtD_mzNYLgg4i1bCBBAn2ESI95dU8C9984-s4wrkTBhadKbsidG6uiOnZTif88PPSmn5ehce-JKPX-My3UUEF8sm4rADuvpjoh9Q6ZxyTkfQcOM8s-NiuhO19YB_IdZW_Z3vZoZu5-mYAUlTc2NbtGLg4dnILlI_GQ78INIb9WP31YhfLywFE-IAlXe2O3fC5FCHHTtmR0Fxcdw3TMBzGmWB5G76srQgQHI");'
+                ></div>
+                <div>
+                  <p class="text-white text-base font-medium leading-normal">Espresso Mastery</p>
+                  <p class="text-[#c9ad92] text-sm font-normal leading-normal">Master the art of espresso making with our expert tips and techniques.</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuANnGNmDV7srQTIPJDPMbbF-UCYeQ9o2xWncfcQXRkbT9z3WD9aAWFsfFUn0LEdqjaH5-Y5_ombhG91KKXLc0bVh1xopnIl-lHiVyJUmLnv9qMCHJ-LK9zLC0cBvn-f8sJUOdyQMw9oj0IYsJaip7r9VlV41m3SNvEjm_JJPNUfiFZeXqc48_TwD6MBwb3chClPaHjsnyVDFa4QFL-kCe_HbLO46nuUVdEDDUNdjpHMn2_Cxlp5BVmoCiIELS2ilNwl5cNXEHgKqmE");'
+                ></div>
+                <div>
+                  <p class="text-white text-base font-medium leading-normal">The Art of Latte</p>
+                  <p class="text-[#c9ad92] text-sm font-normal leading-normal">Learn how to create stunning latte art and impress your friends.</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCtd8gyA1AS94W3kz20oicpb1bkUhRrzjxT1xHBjiQRJCyOMLbVEB1wZ2uex7BqZf2VjDeGrgfDCcoiH3mYQBcJ62SqReGFo9sCeN3FnsOkGz8qVnkj8hNiUzQTWWrU5MTlQwkQ-VBvz0A9iYs2gE3t6pIlzcz67rTJybi1v2wsadhipiXsVP7lRwkkQ5u6ZGxOnix9TP6YNYLoqBBgPvdiLIv0OL-ms2NSnc0Bhym6-qB33znJKpt-2JjJHDG6y8aBd4TDAHZsN0Q");'
+                ></div>
+                <div>
+                  <p class="text-white text-base font-medium leading-normal">Coffee Bean Origins</p>
+                  <p class="text-[#c9ad92] text-sm font-normal leading-normal">Explore the fascinating origins of coffee beans from around the world.</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD-MTu73S6J9PbO9l5IpgCsMVW78yzr-tDnAxgZx_GZjP5vWcPX1qHSKgnEHZ8C4sgVqaAF4XlUFo2apPp_6Ezb2g_XKjjbGdS35WxDXKmfUE45_G-2LUrm-xs7rAxcvsV3kZC6FuCMX-gxglmDFT8yDInbNiwEZqaL16wINn9laYeV1t5AqD_S4kHXvW3GnSj1GZ0V1nbGKOjlfJPWFU4PipWQJgok3WDizO8aHBeuDZlIG5ei9tTD3ONj48JSUYQtOTPo5JAiuXU");'
+                ></div>
+                <div>
+                  <p class="text-white text-base font-medium leading-normal">Cold Brew Perfection</p>
+                  <p class="text-[#c9ad92] text-sm font-normal leading-normal">Discover the secrets to making delicious and refreshing cold brew coffee.</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAF8At_v_B_EaGuBeLs_-KcjiYdzVd-RdimORHU1u34c8WG_hP1XPTvu1_qdr3dE8JJotBEw88vy4OoqFeEELoDsfssuflhlj_XbTlcQXt3lE7A2SiwE-2X1LiLOTysfqMMBVrYgLpJR5vCxjSwjT7DRiAR9UaGox5fwq9tuA1JOtHPyP_BNzl0QgM_P_nGmMdc_fEITLzrx0pxfWUIUIDrLkUuFxbMiZ8VGTWOHbx--5X9jHzeSViE0JUZB-DMXnCwDwF_7rBiios");'
+                ></div>
+                <div>
+                  <p class="text-white text-base font-medium leading-normal">Coffee and Health</p>
+                  <p class="text-[#c9ad92] text-sm font-normal leading-normal">Uncover the health benefits of coffee and how it can enhance your well-being.</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center justify-center p-4">
+              <a href="#" class="flex size-10 items-center justify-center">
+                <div class="text-white" data-icon="CaretLeft" data-size="18px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path>
+                  </svg>
+                </div>
+              </a>
+              <a class="text-sm font-bold leading-normal tracking-[0.015em] flex size-10 items-center justify-center text-white rounded-full bg-[#483623]" href="#">1</a>
+              <a class="text-sm font-normal leading-normal flex size-10 items-center justify-center text-white rounded-full" href="#">2</a>
+              <a class="text-sm font-normal leading-normal flex size-10 items-center justify-center text-white rounded-full" href="#">3</a>
+              <a class="text-sm font-normal leading-normal flex size-10 items-center justify-center text-white rounded-full" href="#">4</a>
+              <a href="#" class="flex size-10 items-center justify-center">
+                <div class="text-white" data-icon="CaretRight" data-size="18px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path>
+                  </svg>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
