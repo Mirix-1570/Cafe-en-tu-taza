@@ -80,7 +80,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'cafe_en_tu_taza_pfs',
         'USER': 'root',
-        'PASSWORD': 'Root',
+        'PASSWORD': 'root',
         'HOST': '127.0.0.1',
         'PORT': '3306'
     },
